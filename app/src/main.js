@@ -3,8 +3,16 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import { RadonInstall } from 'radon-ui'
 
 Vue.config.productionTip = false
+
+Vue.use(RadonInstall, {
+    Modal: true,
+    Notification: true,
+    LoadingBar: true,
+    Preview: true
+})
 
 /* eslint-disable no-new */
 new Vue({

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class='container'>
     <transition name="slide-fade"
                 mode="out-in">
       <router-view></router-view>
@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style lang="stylus">
-#app {
+.container {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

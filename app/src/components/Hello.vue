@@ -1,8 +1,7 @@
 <template>
   <div>
     <img src="../assets/logo.jpg">
-    <router-link to="hy" tag="p">欢迎来到SaiHy的博客</router-link>
-
+    <router-link to="hy" tag="p">{{msg}}</router-link>
   </div>
 </template>
 
@@ -11,7 +10,7 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: '欢迎来到SaiHy的博客'
     }
   }
 }
