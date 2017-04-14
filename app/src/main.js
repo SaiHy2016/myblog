@@ -14,7 +14,6 @@ Vue.use(RadonInstall, {
     Preview: true
 })
 
-/* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
