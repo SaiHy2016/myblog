@@ -14,6 +14,10 @@ export default {
 </script>
 
 <style lang="stylus">
+button{
+  font-size:45px;
+}
+
 .container {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

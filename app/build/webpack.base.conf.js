@@ -33,6 +33,7 @@ module.exports = {
         options: vueLoaderConfig
       },{
         test:/\.(styl|css)$/,
+        include:[/src/,'/node_modules/element-ui/lib'],
         loader:'style-loader!css-loader!stylus-loader'
       },
       {
