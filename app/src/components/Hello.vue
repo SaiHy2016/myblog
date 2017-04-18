@@ -1,7 +1,9 @@
 <template>
   <div class='container'>
-    <img src="../assets/logo.jpg">
-    <router-link to="hy" tag="p">{{msg}}</router-link>
+    
+    <router-link to="hy" tag="p">
+        <img src="../assets/logo.jpg">
+        {{msg}}</router-link>
   </div>
 </template>
 
@@ -25,6 +27,7 @@ export default {
   img {
       max-width:600px;
       width:90%;
-      margin :60px 0 0 0;
+      margin :60px auto 20px;
+      display:block;
     }
 </style>

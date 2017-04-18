@@ -3,6 +3,10 @@ import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import Hy from '@/components/Hy'
 import Lv from '@/components/Lv'
+import Article from '@/components/hy/Article'
+import music from '@/components/hy/music'
+import books from '@/components/hy/books'
+import Aboutme from '@/components/hy/Aboutme'
 
 Vue.use(Router)
 
@@ -18,8 +22,25 @@ export default new Router({
       name:'hy',
       component:Hy,
       children:[
+          {
+              path:'/',
+              component:Article
+          },
         {
-          path:''
+          path:'/Article',
+          component:Article
+        },
+        {
+          path:'/music',
+          component:music
+        },
+        {
+          path:'/books',
+          component:books
+        },
+        {
+          path:'/Aboutme',
+          component:Aboutme
         }
       ]
     },{
