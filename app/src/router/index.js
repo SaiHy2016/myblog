@@ -7,6 +7,7 @@ import Article from '@/components/hy/Article'
 import music from '@/components/hy/music'
 import books from '@/components/hy/books'
 import Aboutme from '@/components/hy/Aboutme'
+import sportSI from '@/components/hy/sportSignin.vue'
 
 Vue.use(Router)
 
@@ -17,7 +18,8 @@ export default new Router({
       path: '/',
       name: 'Hello',
       component: Hello
-    },{
+    },
+      {
       path:'/hy',
       name:'hy',
       component:Hy,
@@ -43,10 +45,20 @@ export default new Router({
           component:Aboutme
         }
       ]
-    },{
+    },
+      {
       path:'/lv',
       name:'lv',
       component:Lv
-    }
+    },
+      {
+        path:'/sportSignin',
+          name:'sportSignin',
+          component:sportSI ,
+          beforeEnter:(to,from,next)=>{
+          document.getElementsByClassName('container')[0].style.animation=''
+            next()
+          }
+      }
   ]
 })
