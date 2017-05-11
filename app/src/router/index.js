@@ -54,11 +54,7 @@ export default new Router({
       {
         path:'/sportSignin',
           name:'sportSignin',
-          component:sportSI ,
-          beforeEnter:(to,from,next)=>{
-          document.getElementsByClassName('container')[0].style.animation=''
-            next()
-          }
+          component:sportSI 
       }
   ]
 })

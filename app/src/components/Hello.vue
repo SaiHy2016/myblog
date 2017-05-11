@@ -27,6 +27,7 @@ export default {
   .spi{
     border 1px solid #ff4081
     padding .2em;
+    text-decoration none
   }
   .tags{
       position absolute
@@ -34,7 +35,7 @@ export default {
       left 50%;
       transform translate(-50%,-50%)
       opacity 0
-      animation showTags 2s linear forwards
+      animation showTags 2s linear forwards,scale 30s linear 4s infinite alternate
   }
   .container{
       position absolute
@@ -43,10 +44,13 @@ export default {
       top:0
       bottom 0
       text-align:center;
-      transform translate3d(0,0,0)
+      backface-visibility:hidden;
+      transform: translate3d(0, 0, 0)
+      perspective: 1000px  
       font-size:20px
       background url('../assets/bg1.jpg') no-repeat
-      animation bgmove 13s linear infinite alternate
+      background-size cover
+      animation bgmove 50s linear infinite alternate
   }
   img {
       max-width:600px;
@@ -57,7 +61,7 @@ export default {
     .title{
         color:#fefefe;
         position relative
-        animation flyIn 2s ease-in forwards ,scale 10s linear 4s infinite alternate
+        animation flyIn 2s ease-in forwards ,scale 30s linear 4s infinite alternate
     }
     @keyframes bgmove{
         0%{
@@ -65,14 +69,6 @@ export default {
         }
         100%{
             background-position right
-        }
-    }
-    @-webkit-keyframes bgmove{
-        0%{
-          background-position 0px
-        }
-        100%{
-            background-position 1000px
         }
     }
     @keyframes  flyIn{
@@ -86,16 +82,6 @@ export default {
         }
     }
     @keyframes scale {
-        0%,100%{
-            font-size 1em
-            opacity 1
-        }
-        50%{
-            font-size 1.2em
-            opacity .6
-        }
-    }
-    @-webkit-keyframes scale {
         0%,100%{
             font-size 1em
             opacity 1
