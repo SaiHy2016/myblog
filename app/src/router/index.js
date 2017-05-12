@@ -4,7 +4,7 @@ import Hello from '@/components/Hello'
 import Hy from '@/components/Hy'
 import Lv from '@/components/Lv'
 import Article from '@/components/hy/Article'
-import music from '@/components/hy/music'
+import resume from '@/components/hy/resume'
 import books from '@/components/hy/books'
 import Aboutme from '@/components/hy/Aboutme'
 import sportSI from '@/components/hy/sportSignin.vue'
@@ -23,30 +23,16 @@ export default new Router({
       path:'/hy',
       name:'hy',
       component:Hy,
-      children:[
-          {
-              path:'/',
-              component:Article
-          },
-        {
-          path:'/Article',
-          component:Article
-        },
-        {
-          path:'/music',
-          component:music
-        },
-        {
-          path:'/books',
-          component:books
-        },
-        {
-          path:'/Aboutme',
-          component:Aboutme
-        }
-      ]
-    },
-      {
+      children:[{
+        path:'article',
+        name:'article',
+        component:Article
+      },{
+          path:'resume',
+          name:'resume',
+          component:resume
+      }]
+    },{
       path:'/lv',
       name:'lv',
       component:Lv

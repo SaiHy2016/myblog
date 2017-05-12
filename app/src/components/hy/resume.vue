@@ -1,5 +1,5 @@
 <template>
     <div>
-        music.vue
+        resume
     </div>
 </template>

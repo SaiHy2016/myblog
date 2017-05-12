@@ -6,6 +6,10 @@
     </router-link>
     <div class="tags">
         <router-link to="sportSignIn" class="spi">跑步签到</router-link>
+        <router-link to="hy/article" class="spi">文章</router-link>
+        <router-link to="hy/resume" class="spi">我的简历</router-link>
+        <router-link to="sportSignIn" class="spi">关于我</router-link>
+        <router-link to='lv' class="spi">去她那</router-link>
     </div>
 
   </div>
@@ -26,16 +30,20 @@ export default {
 <style scoped lang="stylus">
   .spi{
     border 1px solid #ff4081
-    padding .2em;
+    padding .5em;
     text-decoration none
+    border-radius .5em
+    white-space nowrap
   }
   .tags{
       position absolute
       top:50%;
-      left 50%;
-      transform translate(-50%,-50%)
-      opacity 0
-      animation showTags 2s linear forwards,scale 30s linear 4s infinite alternate
+      width:100%
+      animation fadeInUp 1.5s
+      display flex
+      flex-flow row wrap
+      justify-content center
+      align-content center
   }
   .container{
       position absolute
@@ -50,7 +58,6 @@ export default {
       font-size:20px
       background url('../assets/bg1.jpg') no-repeat
       background-size cover
-      animation bgmove 50s linear infinite alternate
   }
   img {
       max-width:600px;
@@ -61,44 +68,29 @@ export default {
     .title{
         color:#fefefe;
         position relative
-        animation flyIn 2s ease-in forwards ,scale 30s linear 4s infinite alternate
+        animation fadeInDownBig 1s
+        top 30%
     }
-    @keyframes bgmove{
-        0%{
-          background-position left
+   @keyframes fadeInDownBig {
+        from {
+            opacity: 0;
+            transform: translate3d(0, -2000px, 0);
         }
-        100%{
-            background-position right
-        }
-    }
-    @keyframes  flyIn{
-       0%{
-           top 26%
-           opacity 0
-       }
-        100%{
-            top 33%
-            opacity .9
+
+        to {
+            opacity: 1;
+            transform: none;
         }
     }
-    @keyframes scale {
-        0%,100%{
-            font-size 1em
-            opacity 1
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translate3d(0, 100%, 0);
         }
-        50%{
-            font-size 1.2em
-            opacity .6
-        }
-    }
-    @keyframes showTags {
-        0%{
-            margin-top 20px;
-            opacity 0
-        }
-        100%{
-            margin-top 0
-            opacity 1
+
+        to {
+            opacity: 1;
+            transform: none;
         }
     }
 </style>
